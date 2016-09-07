@@ -9,9 +9,18 @@
 <body>
 	<input id="username" type="text" placeholder="Name"><br/>
 	<input id="text" type="text" placeholder="Message"><br/>
+	<button id="post">Post</button><br/>
 	<div id="results"></div>
 	<script>
-		var myFirebase = new Firebase('https://learning-firebase-6b2f2.firebaseio.com');
+		var config = {
+		    apiKey: "AIzaSyDwX7Yq9qTyQSoSZjEY5lqDYQbC8x0PuNY",
+		    authDomain: "learning-firebase-6b2f2.firebaseapp.com",
+		    databaseURL: "https://learning-firebase-6b2f2.firebaseio.com",
+		    storageBucket: "learning-firebase-6b2f2.appspot.com",
+    	};
+  		myFirebase.initializeApp(config);
+
+		//var myFirebase = new Firebase('https://learning-firebase-6b2f2.firebaseio.com');
 		var usernameInput = document.querySelector('#username');
 		var textInput = document.querySelector('#text');
 		var postButton = document.querySelector('#post');
